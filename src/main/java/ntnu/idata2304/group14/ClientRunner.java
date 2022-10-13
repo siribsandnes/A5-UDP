@@ -6,6 +6,10 @@ public class ClientRunner {
 
     public static void main(String[] args) {
         UDPclient udPclient = new UDPclient();
-        udPclient.run("task", SERVER_ADDRESS, SERVER_PORT);
+        for(int i = 1; i <= 3; i++){
+            System.out.println("RUN " + i);
+            udPclient.run("task", SERVER_ADDRESS, SERVER_PORT);
+            System.out.println("\n");
+        }
     }
 }
